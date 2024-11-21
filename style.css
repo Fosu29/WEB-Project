@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-image:url('Images/Job\ search.jpg') ;
+    width: 100%;
 }
 
 
@@ -54,8 +55,15 @@ label {
     display: block;
     margin-bottom: 5px;
 }
+input{
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
-input, select, button {
+select, button {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -86,4 +94,14 @@ button:hover {
 img{
     float: right;
     margin-top: 0;
+}
+#info{
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 80%;
+    margin: auto;
+}
+
+#searchBox{
+    background-color: white;
 }

@@ -11,12 +11,23 @@ function printInfo() {
         return;
     }
 
-    const grossPay = hours * pay;
-    const deductions = grossPay * (tax + ni);
-    const netPay = grossPay - deductions;
+    const grossPay = hours * pay; //earned per week
+    const deductions = (grossPay * tax) + (grossPay * ni); //per month
+    const netPayMonth = (grossPay *4)- deductions;
+    const netPayYear = netPayMonth * 12
+    const netPayWeek = netPayMonth /4
 
-    document.getElementById('info').innerText = 
-        `Job Title: ${jobTitle}\nNet Pay: $${netPay.toFixed(2)}`; 
-    }
+    document.getElementById('info').innerText += 
+        `\n \n Job Title: ${jobTitle}
+        \n Gross Pay per Week: $${grossPay.toFixed(2)} 
+        \n Number of working hours per week: ${hours}
+        \n Tax Rate of ${tax*100}% 
+        \n NI Rate of ${ni * 100}%
+        \n Earning a net pay of
+        \n $${netPayWeek.toFixed(2)} per week
+        \n $${netPayMonth.toFixed(2)} per month
+        \n $${netPayYear.toFixed(2)} per year  `; 
+
+}
     
 
